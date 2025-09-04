@@ -18,12 +18,12 @@
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.textarea :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :picture, style: "display: block" %>
-    <%= form.file_field :picture %>
+    <%= form.label :picture, "Picture", style: "display: block" %>
+    <%= form.file_field :picture, id: "idea_picture" %>
   </div>
 
   <div>
