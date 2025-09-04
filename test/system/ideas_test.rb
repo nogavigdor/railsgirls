@@ -16,7 +16,10 @@ class IdeasTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @idea.description
     fill_in "Name", with: @idea.name
-    fill_in "Picture", with: @idea.picture
+    # fill_in "Picture", with: @idea.picture
+    attach_file "idea_picture",
+                Rails.root.join("test/fixtures/files/example.jpg"),
+                make_visible: true
     click_on "Create Idea"
 
     assert_text "Idea was successfully created"
@@ -29,7 +32,10 @@ class IdeasTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @idea.description
     fill_in "Name", with: @idea.name
-    fill_in "Picture", with: @idea.picture
+    # fill_in "Picture", with: @idea.picture
+    attach_file "idea_picture",
+                Rails.root.join("test/fixtures/files/example.jpg"),
+                make_visible: true
     click_on "Update Idea"
 
     assert_text "Idea was successfully updated"
