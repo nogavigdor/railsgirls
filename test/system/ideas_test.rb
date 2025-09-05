@@ -44,7 +44,10 @@ class IdeasTest < ApplicationSystemTestCase
 
   test "should destroy Idea" do
     visit idea_url(@idea)
-    click_on "Destroy this idea", match: :first
+
+    accept_confirm "Are you sure?" do
+      click_on "Destroy this idea", match: :first
+    end
 
     assert_text "Idea was successfully destroyed"
   end
