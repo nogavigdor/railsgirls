@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :ideas do 
+  resources :ideas do
     resources :comments
   end
   # The About page:
